@@ -1,0 +1,63 @@
+/* ---------------------------------------------- *\
+
+  Partial: grid
+
+  We're using Susy. Please visit http://susy.readthedocs.org/en/latest/install/
+
+  Due to using Susy, we're going to need the Ruby gems installed. Please a see a guide here: [TBD].
+
+  Usage
+  =====
+
+\* ---------------------------------------------- */
+
+
+/* - Index
+-------------------------------------------------
+  - Global defaults     ............................. 1.0.
+  - Grid makeup         ............................. 2.0.
+*/
+
+/* ---------------------------------------------- *\
+  1.0 Global defaults
+\* ---------------------------------------------- */
+
+$susy: (
+  flow: ltr,
+  output: float,
+  container: 1200px,
+  container-position: center,
+  columns: 12,
+  gutters: 0.33
+);
+
+
+
+// USEAGE:
+// @include respond-to(tiny) {
+//   color: tomato;
+// }
+
+/* ---------------------------------------------- *\
+  1.0 Grid makeup
+\* ---------------------------------------------- */
+
+$max-width: 1080px;
+$grid-namespace: "contain";
+$grid-column-namespace: "g-";
+$grid-width: $max-width;
+
+//@include breakpoint-set('to-ems', true);
+
+.contain{
+  @include container;
+  min-width: $max-width;
+
+  &--table{
+    display: table;
+    width: 100%;
+    max-width: $max-width;
+    min-width: $max-width;
+    margin: 0 auto;
+  }
+}

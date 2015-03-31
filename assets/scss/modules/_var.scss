@@ -1,0 +1,84 @@
+// sans-serif
+$arial: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$lucidagrande: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+$trebuchet: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+$verdana: Verdana, Geneva, sans-serif;
+
+// serif
+$baskerville: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+$georgia: Georgia, Times, "Times New Roman", serif;
+$lucidabright: "Lucida Bright", Georgia, serif;
+$tnr: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+
+// monospaced
+$consolas: Consolas, monaco, monospace;
+$courier: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+$monaco: Monaco, Consolas, "Lucida Console", monospace;
+
+
+// User defined ------------------------------------------ //
+
+$burger-gutter: 3px;
+$burger-height: 5px;
+
+// fonts ------------------------------------------ //
+
+$primary-font-light: 'source-light',Helvetica,Arial,sans-serif;
+$primary-font: 'source-regular',Helvetica,Arial,sans-serif;
+$primary-font-semi: 'source-semibold',Helvetica,Arial,sans-serif;
+$primary-font-bold: 'source-bold',Helvetica,Arial,sans-serif;
+
+$italic-font: 'source-italic',Helvetica,Arial,sans-serif;
+
+//
+
+// Base font attributes ---- //
+
+$base-font-family: $primary-font;
+$base-font-size: 16;
+$base-line-height: 1.6;
+$blockquote: #e3e3e3;
+
+// Base colours ---- //
+
+$white: #FFFFFF;
+$black: #111;
+$primary-color: #2287d3;
+$primary-color-dark: darken($primary-color, 10%);
+$secondary-color: #34a237;
+$secondary-color-dark: darken($secondary-color, 10%);
+$grey: #999;
+$light-grey: #f3f3f3;
+$text-color: #444;
+
+$link: blue;
+$link-hover: green;
+$link-focus: $primary-color;
+
+
+// Brand-Colors ---- //
+
+$facebook: #3b5998;
+$twitter: #55acee;
+$linkedin: #0976b4;
+$google: #dd4b39;
+$instagram: #3f729b;
+$tumblr: #35465c;
+$vimeo: #1ab7ea;
+
+
+// set basics followed by customs
+$BREAKPOINTS: (
+  tiny: 320px,
+  small: 482px,
+  regular: 575px,
+  medium: 768px,
+  marge: 900px,
+  large: 1025px,
+  x-large: 1200px,
+
+  nav-responsive: 830px,
+  nav-change: 900px,
+  owl-controls: 1400px,
+);

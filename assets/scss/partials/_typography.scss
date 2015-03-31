@@ -1,0 +1,136 @@
+/* ---------------------------------------------- *\
+
+  Partial: typography
+
+  I set all typographic styles here. First we list our variables such as fonts (maybe we're using some @font-face) and
+  additionally and maps we might want to use. Then we specificy the typographic scales we want.
+
+\* ---------------------------------------------- */
+
+
+@font-face {
+    font-family: 'source-light';
+    src: url('/assets/fonts/SourceSansPro-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'source-italic';
+    src: url('/assets/fonts/SourceSansPro-It.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'source-regular';
+    src: url('/assets/fonts/SourceSansPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'source-semibold';
+    src: url('/assets/fonts/SourceSansPro-Semibold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'source-bold';
+    src: url('/assets/fonts/SourceSansPro-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+h1, h2, h3, h4, h5, h6, p{
+    text-rendering: optimizeLegibility;
+    font-weight: normal;
+    line-height: 1.4;
+    color: $text-color;
+}
+
+
+@mixin h1{
+    font-family: $primary-font-bold;
+    font-size: ms(6);
+    margin-bottom: 0.5em;
+    line-height: 1.1;
+}
+@mixin h2{
+    font-family: $primary-font-bold;
+    font-size: ms(5);
+    margin-bottom: 0.5em;
+    line-height: 1.1;
+}
+@mixin h3{
+    font-family: $primary-font-bold;
+    font-size: ms(4);
+    margin-bottom: 0.75em;
+    line-height: 1.1;
+}
+@mixin h4{
+    font-family: $primary-font-bold;
+    font-size: ms(3);
+    margin-bottom: 0.75em;
+    line-height: 1.1;
+}
+@mixin h5{
+    font-family: $primary-font-semi;
+    font-size: ms(2);
+    margin-bottom: 1em;
+}
+@mixin h6{
+    font-family: $primary-font-semi;
+    font-size: ms(1);
+    margin-bottom: 1em;
+}
+@mixin p{
+    font-family: $primary-font;
+    font-size: 15px;
+    margin-bottom: 1em;
+    @include respond-to(small){
+        font-size: ms(0);
+    }
+}
+
+
+.tar{
+    text-align: right;
+}
+.tac{
+    text-align: center;
+}
+
+.bold, strong, b{
+    font-family: $primary-font-bold;
+    font-weight: bold;
+}
+.italic{
+   font-family: $italic-font;
+}
+
+
+h1{
+    @include h1;
+}
+h2{
+    @include h2;
+}
+h3{
+    @include h3;
+}
+h4{
+    @include h4;
+}
+h5{
+    @include h5;
+}
+h6{
+    @include h6;
+}
+p{
+    @include p;
+}

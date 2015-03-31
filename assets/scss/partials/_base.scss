@@ -1,0 +1,137 @@
+/* ---------------------------------------------- *\
+
+  Partial: base
+
+  Here you place the base defaults to any project
+
+\* ---------------------------------------------- */
+
+	*, *:before, *:after {
+	  	box-sizing: border-box;
+	}
+	html {
+		font-size: 100%;
+		text-size-adjust: 100%;
+	}
+
+	body {
+		color: $black;
+		font-family: $primary-font;
+		font-size: 15px;
+		line-height: $base-line-height;
+		margin: 3px;
+		@include respond-to(nav-responsive){
+			font-size: 16px;
+		}
+	}
+
+	html, body{ height: 100%; min-height: 100%; position:relative;}
+
+	small {
+		font-size: 0.85em;
+	}
+
+	ul li {
+		list-style: none;
+	}
+
+	ol li {
+		list-style: none;
+	}
+
+	img, object, embed {
+		height: auto;
+		max-width: 100%;
+	}
+
+	blockquote {
+		background: $blockquote;
+		color: $white;
+		font-size: 1.1em;
+		font-style: italic;
+		margin: 0 0 1.250em 1.250em;
+		padding: 0.625em 1.250em 1.250em;
+		p {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+
+/*********************************************
+	- 2.0 -  LINKS
+*********************************************/
+
+	/* - 2.1. - BASE LINK STYLES
+	------------------------------------------ */
+
+	a {
+		color: $link;
+		cursor: pointer;
+		text-decoration:none;
+		&:visited {
+
+		}
+		&:hover {
+			color: $link-hover;
+		}
+		&:active {
+
+		}
+		&:focus {
+			color: $link-focus;
+		}
+		/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+		&:focus,
+		&:active {
+			outline: none;
+		}
+	}
+
+
+	/* - 2.2. - HEADER LINKS
+	------------------------------------------ */
+
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+	.h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
+		color: $link;
+	}
+
+
+/*********************************************
+	- 3.0 -  Helpers
+*********************************************/
+
+	.hide {
+		display: none;
+	}
+
+	.center-align {
+		text-align: center;
+	}
+
+	.container{
+		@include container;
+		max-width: 1300px;
+		width: 84%;
+		@include respond-to(small){
+			width: 88%;
+		}
+		@include respond-to(regular){
+			width: 92%;
+		}
+	}
+	.band{
+		padding: 4em 0;
+		@include respond-to(medium){
+			padding: 6em 0;
+		}
+	}
+	.band-white{
+		background-color: #fff;
+	}
+
+	.content-wrap{
+		overflow-x: hidden;
+	}

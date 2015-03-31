@@ -1,0 +1,168 @@
+// header{
+//     width: 100%;
+//     padding: 1em;
+//     background-color: black;
+//     background-color: rgba(0,0,0,0.2);
+//     position: absolute;
+//     top: 0;
+//     height: 98px;
+//     @include respond-to(large){
+//         padding: 1em 2em;
+//     }
+// }
+
+
+header{
+    width: 100%;
+    //padding: 1em;
+    background-color: black;
+    background-color: rgba(0,0,0,0.35);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 98px;
+    z-index: 1000;
+    perspective: 800px;
+    transition: all 300ms ease-in-out;
+    @include respond-to(nav-responsive){
+        background-color: rgba(0,0,0,0.2);
+        padding: 1em;
+    }
+    @include respond-to(large){
+        padding: 1em 2em;
+    }
+    &.scrolled{
+        height: 62px;
+        //padding: 0.2em 1em;
+        padding: 0;
+        background-color: rgba(0,0,0,0.85);
+        transition: all 300ms ease-in-out;
+    }
+}
+.header-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.logo{
+    height:4.1em;
+    width: auto;
+    max-width: 12.5em;
+    display: block;
+    float: left;
+    padding: 0.5em 0 0  0.5em;
+    @include respond-to(medium){
+        max-width: 20%;
+    }
+    @include respond-to(nav-responsive){
+        padding: 0;
+    }
+
+}
+.logo-icon{
+
+    height: auto;
+    width: auto;
+    max-width: 9em;
+    max-height: 100%;
+    fill: #fff;
+    @include respond-to(marge){
+        max-width: 11.5em;
+        height:4.1em;
+    }
+    .scrolled &{
+        height: auto;
+        max-height: 100%;
+        max-width: 7em;
+    }
+}
+.header-links{
+    float: right;
+    font-size: 14px;
+    height: auto;
+    @include respond-to(medium){
+        max-width: 80%;
+    }
+    @include respond-to(nav-responsive){
+        @include vertical-align-rel;
+    }
+    @include respond-to(nav-change){
+        font-size: 16px;
+    }
+}
+// .nav{
+//     position: relative;
+//     overflow-y: scroll;
+// }
+.login-buttons{
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    transition: all 500ms ease-in-out;
+    //display: none;
+    .scrolled &{
+        bottom: -33px;
+        // display: none;
+        transform: translateY(-300%);
+        transition: all 500ms ease-in-out;
+        @include respond-to(nav-responsive){
+            transform: none;
+        }
+        .show-menu &{
+            // display: block;
+            transform: translateY(0);
+            transition: all 500ms ease-in-out;
+        }
+    }
+    @include respond-to(nav-responsive){
+        display: block;
+        float: right;
+        position: relative;
+        top: 3px;
+        width: auto;
+        margin-right: 5px;
+    }
+    @include respond-to(large){
+        font-size: 15px;
+        // top: 0;
+    }
+
+    .signup-button, .signin-button{
+        font-size: 13px;
+        float: left;
+        width: 50%;
+        margin-right: 0;
+        border-radius: 0;
+        @include respond-to(nav-responsive){
+            border-radius: 2px;
+            width: auto;
+            float: none;
+        }
+        @include respond-to(large){
+            font-size: 15px;
+        }
+        .signup-button{
+            @include respond-to(nav-responsive){
+                margin-right: 1em;
+            }
+        }
+    }
+}
+.menu-button-wrap{
+    @include respond-to(nav-responsive){
+        display: none;
+    }
+}
+// @keyframes fadeOut {
+// 0% {opacity: 1;}
+// 100% {opacity: 0;}
+// }
+// .logo {
+// animation-name: fadeOut;
+// animation-duration: 1s;
+// animation-delay: 8s;
+// opacity: 0;
+// }

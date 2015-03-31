@@ -1,0 +1,182 @@
+footer{
+    width: 100%;
+    @include clearfix;
+    background: #fff;
+    border-top: 3px solid $grey;
+    padding: 3em 0;
+}
+.footer-info{
+    @include clearfix;
+    margin-bottom: 1.5em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid #ccc;
+    @include respond-to(regular){
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border: none;
+        @include span(6 of 12 3/4);
+        text-align: left;
+    }
+    @include respond-to(medium){
+        @include span(5 of 12);
+    }
+    @include respond-to(marge){
+        @include span(4 of 12 1/2);
+    }
+
+}
+.footer-nav{
+    //text-align: center;
+    @include clearfix;
+    margin-bottom: 1.5em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid #ccc;
+    @include respond-to(regular){
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border: none;
+        @include span(5 of 12 last 3/4);
+        text-align: left;
+    }
+    @include respond-to(marge){
+        @include span(5 of 12 1/2);
+        @include push (1 of 12)
+    }
+}
+.footer-social{
+    width: 100%;
+    float: left;
+    @include clearfix;
+    @include respond-to(regular){
+        margin-top: 1em;
+        padding-top: 1em;
+        border-top: 1px solid #ccc;
+    }
+    // @include respond-to(medium){
+    //     @include span(2 of 12 last);
+    // }
+    @include respond-to(marge){
+        @include span(2 of 12 last 1/2);
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+    }
+}
+.footer-logo{
+    width: 100%;
+    img{
+        max-height: 4em;
+        width: 10em;
+        height: auto;
+        max-width: 100%;
+    }
+}
+.footer-text{
+    font-size: 14px;
+    a,p{
+        color: $grey;
+    }
+    p{
+        margin-bottom: 0;
+    }
+}
+.footer-nav{
+    @include clearfix;
+    ul{
+        width: 100%;
+    }
+    li{
+        width:48%;
+        float: left;
+        margin-right: 1%;
+        @include respond-to(small){
+            width: 32%;
+        }
+        @include respond-to(regular){
+            width: 48%
+        }
+        a{
+            color: #666;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+    }
+}
+.footer-social__item{
+    @include clearfix;
+    margin-bottom: 0.5em;
+    @include respond-to(small){
+        @include span (4 of 12 0);
+        margin-bottom: 0;
+    }
+    @include respond-to(marge){
+        width: 100%;
+        margin-bottom: 0.5em;
+        text-align: left;
+    }
+}
+.footer-social__icon{
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    margin-right: 0.7em;
+    vertical-align: middle;
+
+    svg{
+        fill: #666;
+    }
+
+}
+.footer-social__text{
+    display: inline-block;
+    vertical-align: middle;
+    a{
+        color: #666;
+    }
+}
+
+.footer-social__facebook{
+    &:hover{
+        .footer-social__icon{
+            svg{
+                fill: $facebook;
+            }
+        }
+        .footer-social__text{
+            a{
+                color: $facebook;
+            }
+        }
+    }
+}
+
+.footer-social__twitter{
+    &:hover{
+        .footer-social__icon{
+            svg{
+                fill: $twitter;
+            }
+        }
+        .footer-social__text{
+            a{
+                color: $twitter;
+            }
+        }
+    }
+}
+
+.footer-social__linkedin{
+    &:hover{
+        .footer-social__icon{
+            svg{
+                fill: $linkedin;
+            }
+        }
+        .footer-social__text{
+            a{
+                color: $linkedin;
+            }
+        }
+    }
+}
